@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thank You Page</title>
+</head>
+<body>
+	<h1>Thank You for Your Submission!</h1>
+
+	<script>
+		// Get the form data from the URL parameters
+		const urlParams = new URLSearchParams(window.location.search);
+		const name = urlParams.get('name');
+		const email = urlParams.get('email');
+		const message = urlParams.get('message');
+
+		// Display the form data on the page
+		const messageEl = document.createElement('p');
+		messageEl.innerText = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+		document.body.appendChild(messageEl);
+	</script>
+</body>
+</html>
